@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 700px;
+        width: 1200px;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script>
+         function initMap() {
+           var fcu = {lat:24.178836, lng:120.646619};
+           var map = new
+             google.maps.Map(document.getElementById('map'), {
+               zoom: 13,	//0~18
+               center: fcu,	//center放經緯度
+               mapTypeId:'roadmap',
+               /*
+               zoomControl: false,
+               mapTypeControl: false,
+               scaleControl: false,
+               streetViewControl: false,
+               rotateControl: false,
+               fullscreenControl: false
+               */
+             });
+             /*
+            var marker = new google.maps.Marker({
+             position: fcu, //地標放經緯度
+             map: map,  //放在哪張map
+             //icon: 'http://www.fcu.edu.tw/wSite/public/LayoutDesign/1389926960033.jpg'
+            });  //new出一個mark
+
+            marker.addListener('mouseover',function(){
+            infowindow1.open(map, marker);
+            });
+            */
+
+            var post1;
+            post1 = new google.maps.Marker({
+              position: {lat:24.1824208, lng:120.6005393},
+              map: map,
+              icon: 'https://i.imgur.com/FSGkjNu.png',
+            });
+
+            post1.addListener('mouseover',function(){
+            infowindow1.open(map, post1);
+            });
+            
+            var infowindow1 = new google.maps.InfoWindow({
+              content: '臺中市西屯區臺灣大道4段1727號'//contentString1
+            });
+
+            var post2 = new google.maps.Marker({
+              position: {lat:24.1752769, lng:120.6469453},
+              map: map,
+              icon: 'https://i.imgur.com/FSGkjNu.png',
+            });
+
+            post2.addListener('mouseover',function(){
+            infowindow2.open(map, post2);
+            });
+            
+            var infowindow2 = new google.maps.InfoWindow({
+              content: '臺中市西屯區河南路2段268號'//contentString1
+            });
+
+            var post3 = new google.maps.Marker({
+              position: {lat:24.1766951, lng:120.635454},
+              map: map,
+              icon: 'https://i.imgur.com/FSGkjNu.png',
+            });
+
+            post3.addListener('mouseover',function(){
+            infowindow3.open(map, post3);
+            });
+            
+            var infowindow3 = new google.maps.InfoWindow({
+              content: '臺中市西屯區黎明路3段130號'//contentString1
+            });
+
+            var post4 = new google.maps.Marker({
+              position: {lat:24.1646991, lng:120.6520514},
+              map: map,
+              icon: 'https://i.imgur.com/FSGkjNu.png',
+            });
+
+            post4.addListener('mouseover',function(){
+            infowindow4.open(map, post4);
+            });
+            
+            var infowindow4 = new google.maps.InfoWindow({
+              content: '臺中市西屯區青海路1段83號'//contentString1
+            });
+
+            var post5 = new google.maps.Marker({
+              position: {lat:24.1699328, lng:120.6042656},
+              map: map,
+              icon: 'https://i.imgur.com/FSGkjNu.png',
+            });
+
+            post5.addListener('mouseover',function(){
+            infowindow5.open(map, post5);
+            });
+            
+            var infowindow5 = new google.maps.InfoWindow({
+              content: '臺中市西屯區工業區六路10號'//contentString1
+            });
+            
+            var post6 = new google.maps.Marker({
+              position: {lat:24.1837633, lng:120.6015179},
+              map: map,
+              icon: 'https://i.imgur.com/FSGkjNu.png',
+            });
+
+            post6.addListener('mouseover',function(){
+            infowindow6.open(map, post6);
+            });
+            
+            var infowindow6 = new google.maps.InfoWindow({
+              content: '臺中市西屯區臺灣大道4段1650號'//contentString1
+            });
+
+            var post7 = new google.maps.Marker({
+              position: {lat:24.1906076, lng:120.6101588},
+              map: map,
+              icon: 'https://i.imgur.com/FSGkjNu.png',
+            });
+
+            post7.addListener('mouseover',function(){
+            infowindow7.open(map, post7);
+            });
+            
+            var infowindow7 = new google.maps.InfoWindow({
+              content: '臺中市西屯區永安里西屯路3段166-80號'//contentString1
+            });
+
+            var post8 = new google.maps.Marker({
+              position: {lat:24.1564676, lng:120.6507718},
+              map: map,
+              icon: 'https://i.imgur.com/FSGkjNu.png',
+            });
+
+            post8.addListener('mouseover',function(){
+            infowindow8.open(map, post8);
+            });
+            
+            var infowindow8 = new google.maps.InfoWindow({
+              content: '臺中市西屯區大隆路60、62號'//contentString1
+            });
+
+            var post9 = new google.maps.Marker({
+              position: {lat:24.1834831, lng:120.6163698},
+              map: map,
+              icon: 'https://i.imgur.com/FSGkjNu.png',
+            });
+
+            post9.addListener('mouseover',function(){
+            infowindow9.open(map, post9);
+            });
+            
+            var infowindow9 = new google.maps.InfoWindow({
+              content: '臺中市西屯區福順路318號'//contentString1
+            });
+
+            var post10 = new google.maps.Marker({
+              position: {lat:24.1665884, lng:120.6409554},
+              map: map,
+              icon: 'https://i.imgur.com/FSGkjNu.png',
+            });
+
+            post10.addListener('mouseover',function(){
+            infowindow10.open(map, post10);
+            });
+            
+            var infowindow10 = new google.maps.InfoWindow({
+              content: '西屯區臺灣大道3段366號1樓'//contentString1
+            });
+
+            var post11 = new google.maps.Marker({
+              position: {lat:24.2085836, lng:120.6118922},
+              map: map,
+              icon: 'https://i.imgur.com/FSGkjNu.png',
+            });
+
+            post11.addListener('mouseover',function(){
+            infowindow11.open(map, post11);
+            });
+            
+            var infowindow11 = new google.maps.InfoWindow({
+              content: '西屯區中科路1號'//contentString1
+            });
+
+            var yo1 = new google.maps.Marker({
+              position: {lat:24.182917, lng:120.601329},
+              map: map,
+              icon: 'https://i.imgur.com/XJ498BZ.png',
+            });
+
+            yo1.addListener('mouseover',function(){
+            infowindowY1.open(map, yo1);
+            });
+            
+            var infowindowY1 = new google.maps.InfoWindow({
+              content: '福聯里臺灣大道四段1832號'//contentString1
+            });
+
+            var yo2 = new google.maps.Marker({
+              position: {lat:24.166172, lng:120.6167797},
+              map: map,
+              icon: 'https://i.imgur.com/XJ498BZ.png',
+            });
+
+            yo2.addListener('mouseover',function(){
+            infowindowY2.open(map, yo2);
+            });
+            
+            var infowindowY2 = new google.maps.InfoWindow({
+              content: '安和路51-8號'//contentString1
+            });
+
+            var yo3 = new google.maps.Marker({
+              position: {lat:24.1721424, lng:120.6432179},
+              map: map,
+              icon: 'https://i.imgur.com/XJ498BZ.png',
+            });
+
+            yo3.addListener('mouseover',function(){
+            infowindowY3.open(map, yo3);
+            });
+            
+            var infowindowY3 = new google.maps.InfoWindow({
+              content: '河南路二段341號'//contentString1
+            });
+
+            var yo4 = new google.maps.Marker({
+              position: {lat:24.2009436, lng:120.6526511},
+              map: map,
+              icon: 'https://i.imgur.com/XJ498BZ.png',
+            });
+
+            yo4.addListener('mouseover',function(){
+            infowindowY4.open(map, yo4);
+            });
+            
+            var infowindowY4 = new google.maps.InfoWindow({
+              content: '中清路三段150號'//contentString1
+            });
+
+            var yo5 = new google.maps.Marker({
+              position: {lat:24.1844179, lng:120.5881845},
+              map: map,
+              icon: 'https://i.imgur.com/XJ498BZ.png',
+            });
+
+            yo5.addListener('mouseover',function(){
+            infowindowY5.open(map, yo5);
+            });
+            
+            var infowindowY5 = new google.maps.InfoWindow({
+              content: '福聯里臺灣大道五段142號1樓'//contentString1
+            });
+
+            var yo6 = new google.maps.Marker({
+              position: {lat:24.1983873, lng:120.6403902},
+              map: map,
+              icon: 'https://i.imgur.com/XJ498BZ.png',
+            });
+
+            yo6.addListener('mouseover',function(){
+            infowindowY6.open(map, yo6);
+            });
+            
+            var infowindowY6 = new google.maps.InfoWindow({
+              content: '廣福路191號'//contentString1
+            });
+
+            var yo7 = new google.maps.Marker({
+              position: {lat:24.2081756, lng:120.6488371},
+              map: map,
+              icon: 'https://i.imgur.com/XJ498BZ.png',
+            });
+
+            yo7.addListener('mouseover',function(){
+            infowindowY7.open(map, yo7);
+            });
+            
+            var infowindowY7 = new google.maps.InfoWindow({
+              content: '中清路三段1號'//contentString1
+            });
+
+            var yo8 = new google.maps.Marker({
+              position: {lat:24.192622, lng:120.6209773},
+              map: map,
+              icon: 'https://i.imgur.com/XJ498BZ.png',
+            });
+
+            yo8.addListener('mouseover',function(){
+            infowindowY8.open(map, yo8);
+            });
+            
+            var infowindowY8 = new google.maps.InfoWindow({
+              content: '福雅路300號'//contentString1
+            });
+
+            var yo9 = new google.maps.Marker({
+              position: {lat:24.174953, lng:120.6021312},
+              map: map,
+              icon: 'https://i.imgur.com/XJ498BZ.png',
+            });
+
+            yo9.addListener('mouseover',function(){
+            infowindowY9.open(map, yo9);
+            });
+            
+            var infowindowY9 = new  google.maps.InfoWindow({
+              content: '工業八路2號'//contentString1
+            });
+
+            var yo10 = new google.maps.Marker({
+              position: {lat:24.1628253, lng:120.6262056},
+              map: map,
+              icon: 'https://i.imgur.com/XJ498BZ.png',
+            });
+
+            yo10.addListener('mouseover',function(){
+            infowindowY10.open(map, yo10);
+            });
+            
+            var infowindowY10 = new  google.maps.InfoWindow({
+              content: '環中路3段800號'//contentString1
+            });
+
+            var yo11 = new google.maps.Marker({
+              position: {lat:24.1874209, lng:120.616208},
+              map: map,
+              icon: 'https://i.imgur.com/XJ498BZ.png',
+            });
+
+            yo11.addListener('mouseover',function(){
+            infowindowY11.open(map, yo11);
+            });
+            
+            var infowindowY11 = new  google.maps.InfoWindow({
+              content: '福康路199號'//contentString1
+            });
+
+            var yo12 = new google.maps.Marker({
+              position: {lat:24.180119, lng:120.6303033},
+              map: map,
+              icon: 'https://i.imgur.com/XJ498BZ.png',
+            });
+
+            yo12.addListener('mouseover',function(){
+            infowindowY12.open(map, yo12);
+            });
+            
+            var infowindowY12 = new  google.maps.InfoWindow({
+              content: '福科路110號'//contentString1
+            });
+
+            var yo13 = new google.maps.Marker({
+              position: {lat:24.171489, lng:120.6576353},
+              map: map,
+              icon: 'https://i.imgur.com/XJ498BZ.png',
+            });
+
+            yo13.addListener('mouseover',function(){
+            infowindowY13.open(map, yo13);
+            });
+            
+            var infowindowY13 = new  google.maps.InfoWindow({
+              content: '文心路3段187號'//contentString1
+            });
+
+            var yo14 = new google.maps.Marker({
+              position: {lat:24.1618038, lng:120.6483075},
+              map: map,
+              icon: 'https://i.imgur.com/XJ498BZ.png',
+            });
+
+            yo14.addListener('mouseover',function(){
+            infowindowY14.open(map, yo14);
+            });
+            
+            var infowindowY14 = new  google.maps.InfoWindow({
+              content: '台灣大道2段917號'//contentString1
+            });
+
+            var yo15 = new google.maps.Marker({
+              position: {lat:24.2012093, lng:120.6077827},
+              map: map,
+              icon: 'https://i.imgur.com/XJ498BZ.png',
+            });
+
+            yo15.addListener('mouseover',function(){
+            infowindowY15.open(map, yo15);
+            });
+            
+            var infowindowY15 = new  google.maps.InfoWindow({
+              content: '林厝里東大路一段1220號'//contentString1
+            });
+
+
+            var yo16 = new google.maps.Marker({
+              position: {lat:24.1951644, lng:120.6420678},
+              map: map,
+              icon: 'https://i.imgur.com/XJ498BZ.png',
+            });
+
+            yo16.addListener('mouseover',function(){
+            infowindowY16.open(map, yo16);
+            });
+            
+            var infowindowY16 = new  google.maps.InfoWindow({
+              content: '環中路二段698號'//contentString1
+            });
+
+            var yo17 = new google.maps.Marker({
+              position: {lat:24.2007819, lng:120.6547873},
+              map: map,
+              icon: 'https://i.imgur.com/XJ498BZ.png',
+            });
+
+            yo17.addListener('mouseover',function(){
+            infowindowY17.open(map, yo17);
+            });
+            
+            var infowindowY17 = new  google.maps.InfoWindow({
+              content: '環中路一段2490號'//contentString1
+            });
+
+            var yo18 = new google.maps.Marker({
+              position: {lat:24.2051471, lng:120.6268954},
+              map: map,
+              icon: 'https://i.imgur.com/XJ498BZ.png',
+            });
+
+            yo18.addListener('mouseover',function(){
+            infowindowY18.open(map, yo18);
+            });
+            
+            var infowindowY18 = new  google.maps.InfoWindow({
+              content: '林厝里福雅路693號'//contentString1
+            });
+
+
+
+
+
+            
+
+            
+
+
+            
+            
+         }
+       </script>
+       <script async defer
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxUbKNIBlxqH4Byvq4JWZT12wMyBdNTdw&callback=initMap">
+       </script>
+     </body>
+   </html>
